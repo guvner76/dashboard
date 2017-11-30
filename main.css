@@ -1,0 +1,263 @@
+@import url(https://fonts.googleapis.com/css?family=Spectral+SC500);
+* {
+  box-sizing: border-box;
+}
+
+.button {
+  font-size: 100%;
+  border: none;
+  background-color: #ebebf0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  z-index: 1;
+  padding: 0;
+}
+@media (min-width: 40em) {
+  .button {
+    font-size: 2em;
+  }
+}
+.button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 10px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 10, 50, 0.2);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+  transition: -webkit-transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+  transition: transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+  transition: transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9), -webkit-transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+  -webkit-transform: translate3D(0, 0, 0);
+          transform: translate3D(0, 0, 0);
+}
+.button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ebebf0;
+  z-index: -1;
+}
+.button:hover:before, .button:focus:before {
+  -webkit-transform: translate3D(10px, 0, 0);
+          transform: translate3D(10px, 0, 0);
+}
+.button:active:before {
+  -webkit-transform: translate3D(0, 0, 0);
+          transform: translate3D(0, 0, 0);
+}
+.button:focus, .button:active {
+  outline: none;
+}
+.button .button__inner {
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: #ffffff;
+  padding: 1em ;
+  background-color: #fbfbfb;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+  transition: -webkit-transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+  transition: transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+  transition: transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9), -webkit-transform 0.6s cubic-bezier(0, 0.9, 0.13, 0.9);
+  position: relative;
+}
+.button:hover .button__inner, .button:focus .button__inner {
+  -webkit-transform: translate3D(0, -10px, 0);
+          transform: translate3D(0, -10px, 0);
+}
+.button:active .button__inner {
+  -webkit-transform: translate3D(0, 0, 0);
+          transform: translate3D(0, 0, 0);
+}
+.button:hover .button__inner, .button:focus .button__inner {
+  background-color: #fff;
+}
+//Primary
+.button--primary {
+  background-color: #920b2d;
+  z-index: 0;
+}
+.button--primary:after {
+  background-color: #920b2d;
+}
+.button--primary .button__inner {
+  background-color: #6f7376;
+}
+.button--primary:hover .button__inner, .button--primary:focus .button__inner {
+  background-color: #d11141;
+}
+//Secondary style
+.button--secondary {
+  background-color: #007b3e;
+  z-index: 0;
+}
+.button--secondary:after {
+  background-color: #007b3e;
+}
+.button--secondary .button__inner {
+  background-color: #6f7376;
+}
+.button--secondary:hover .button__inner, .button--secondary:focus .button__inner {
+  background-color: #00b159;
+}
+//Tertiary style
+.button--tertiary {
+  background-color: #007999;
+  z-index: 0;
+}
+.button--tertiary:after {
+  background-color: #007999;
+}
+.button--tertiary .button__inner {
+  background-color: #6f7376;
+}
+.button--tertiary:hover .button__inner, .button--tertiary:focus .button__inner {
+  background-color: #00aedb;
+}
+//Quaternary style
+.button--quaternary {
+  background-color: #aa5325;
+  z-index: 0;
+}
+.button--quaternary:after {
+  background-color: #aa5325;
+}
+.button--quaternary .button__inner {
+  background-color: #6f7376;
+}
+.button--quaternary:hover .button__inner, .button--quaternary:focus .button__inner {
+  background-color: #f37735;
+}
+//Quinary style
+.button--quinary {
+  background-color: #b28919;
+  z-index: 0;
+}
+.button--quinary:after {
+  background-color: #b28919;
+}
+.button--quinary .button__inner {
+  background-color: #6f7376;
+}
+.button--quinary:hover .button__inner, .button--quinary:focus .button__inner {
+  background-color: #ffc425;
+}
+//Senary style
+.button--senary {
+  background-color: #066b0a;
+  z-index: -25;
+}
+.button--senary:after {
+  background-color: #066b0a;
+}
+.button--senary .button__inner {
+  background-color: #6f7376;
+}
+.button--senary:hover .button__inner, .button--senary:focus .button__inner {
+  background-color: #099a0f;
+}
+//Septenary style
+.button--septenary {
+  background-color: #00d18e;
+  z-index: 0;
+}
+.button--septenary:after {
+  background-color: #428fa6;
+}
+.button--septenary .button__inner {
+  background-color: #55b8d6;
+}
+.button--septenary:hover .button__inner, .button--septenary:focus .button__inner {
+  background-color: #5fcdee;
+}
+//Octonary style
+.button--octonary {
+  background-color: #00d18e;
+  z-index: 0;
+}
+.button--octonary:after {
+  background-color: #70827e;
+}
+.button--octonary .button__inner {
+  background-color: #70827e;
+}
+.button--octonary:hover .button__inner, .button--octonary:focus .button__inner {
+  background-color: #a0bbb5;
+}
+//Nonary style
+.button--nonary {
+  background-color: #b29600;
+  z-index: 0;
+}
+.button--nonary:after {
+  background-color: #b29600;
+}
+.button--nonary .button__inner {
+  background-color: #e5c100;
+}
+.button--nonary:hover .button__inner, .button--nonary:focus .button__inner {
+  background-color: #ffd700;
+}
+//Denary style
+.button--denary {
+  background-color: #8946a0;
+  z-index: 0;
+}
+.button--denary:after {
+  background-color: #8946a0;
+}
+.button--denary .button__inner {
+  background-color: #b05ace;
+}
+.button--denary:hover .button__inner, .button--denary:focus .button__inner {
+  background-color: #c465e5;
+}
+html, body {
+  background-color: #fbfbfb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: Spectral+SC500;
+  color: #6f7376;
+}
+
+html, body, .button__inner {
+background-color: #6f7376;
+text-decoration:none;
+}
+a:link {
+	text-decoration: none
+}
+a:visited {
+	text-decoration: none
+}
+a:active {
+	text-decoration: none
+}
+a:hover {
+	text-decoration: none
+}
+a{
+    display: inline-block;
+}
